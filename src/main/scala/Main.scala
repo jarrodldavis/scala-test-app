@@ -14,7 +14,10 @@ object HelloWorld extends App {
 
   val route: Route = get {
     pathSingleSlash {
-      complete("Hello World")
+      complete(
+        "Hello World\n" +
+        "scala: " + scala.util.Properties.versionString + "\n" +
+        "java: " + scala.util.Properties.javaVersion)
     }
   }
   val port = (scala.util.Properties.envOrElse("PORT", "8080")).toInt
