@@ -3,7 +3,7 @@
 {
 	"name": "Scala",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "sbtscala/scala-sbt:eclipse-temurin-17.0.3_1.7.1_2.13.8"
+	"image": "sbtscala/scala-sbt:eclipse-temurin-17.0.3_1.7.1_2.13.8",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -12,7 +12,13 @@
 	// "forwardPorts": [],
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"scala-lang.scala"
+			]
+		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
